@@ -2,8 +2,9 @@ const inquirer = require("inquirer");
 const axios = require("axios");
 const fs = require('fs');
 
-function promptUser() {
-    return inquirer.prompt([
+async function promptUser() {
+    const userResonse = 
+    await inquirer.prompt([
       {
         type: "input",
         message: "What is your GitHub user name?",
@@ -23,7 +24,7 @@ function promptUser() {
     },
 
     {
-        type: "list",
+        type: "input",
         message: "List your table of contents here",
         name: "contents"
     },
@@ -41,15 +42,13 @@ function promptUser() {
     },
 
     {
-        type: "input",
-        message: "Provide license name ",
+        type: "list",
+        message: "Select license used:",
         name: "licenseName"
-    },
-
-    {
-        type: "input",
-        message: "Provide License url ",
-        name: "licenseUrl"
+        choices: [
+            "MIT",
+            
+        ]
     },
 
     {
@@ -64,6 +63,8 @@ function promptUser() {
         name: "tests"
     }
     ]);
+
+    console.log(userResonse);
 }
 
 
