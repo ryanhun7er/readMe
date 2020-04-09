@@ -5,13 +5,12 @@ const fs = require('fs');
 //pull in user input
 
 const gitUsername = userResponse.username;
-const projectTittle = userResponse.projectTittle;
-const projectDescription = userResponse.projectDescription;
-const installationProcess = userResponse.installationProcess;
+const projectT = userResponse.projectT;
+const projectD = userResponse.projectD;
+const contents = userResonse.contents;
+const install = userResponse.install;
 const instruction = userResponse.instruction;
-const instructionExample = userResponse.instructionExample;
 const licenseName = userResponse.licenseName;
-const licenseUrl = userResponse.licenseUrl;
 const contributorUserNames = userResponse.contributorsGitUserName;
 const tests = userResponse.tests;
     
@@ -24,7 +23,7 @@ const gitEmail = gitData.email;
 const gitlocation = gitData.location;
 const gitUrl = gitData.html_url;
 const gitProfileImage = gitData.avatar_url;
-const contributorUserNamesArray = contributorUserNames.split(",");
+//const contributorUserNamesArray = contributorUserNames.split(",");
 
 //user questions
 
@@ -95,6 +94,26 @@ async function promptUser() {
 
     console.log(userResonse);
 }
+
+var userInput = (`
+
+# ${projectT}
+*${projectD}
+
+## Table of Contents
+*${contents}
+
+## Installation
+*${install}
+
+
+
+
+`
+
+    
+
+)
 
 
     promptUser();
