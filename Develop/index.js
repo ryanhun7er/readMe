@@ -2,6 +2,32 @@ const inquirer = require("inquirer");
 const axios = require("axios");
 const fs = require('fs');
 
+//pull in user input
+
+const gitUsername = userResponse.username;
+const projectTittle = userResponse.projectTittle;
+const projectDescription = userResponse.projectDescription;
+const installationProcess = userResponse.installationProcess;
+const instruction = userResponse.instruction;
+const instructionExample = userResponse.instructionExample;
+const licenseName = userResponse.licenseName;
+const licenseUrl = userResponse.licenseUrl;
+const contributorUserNames = userResponse.contributorsGitUserName;
+const tests = userResponse.tests;
+    
+//retrieve data from git
+    
+const gitResponse = await axios.get(`https://api.github.com/users/${gitUsername}`);
+const gitData = gitResponse.data;
+const gitName = gitData.login;
+const gitEmail = gitData.email;
+const gitlocation = gitData.location;
+const gitUrl = gitData.html_url;
+const gitProfileImage = gitData.avatar_url;
+const contributorUserNamesArray = contributorUserNames.split(",");
+
+//user questions
+
 async function promptUser() {
     const userResonse = 
     await inquirer.prompt([
@@ -43,17 +69,20 @@ async function promptUser() {
 
     {
         type: "list",
+        name: "licenseName",
         message: "Select license used:",
-        name: "licenseName"
         choices: [
             "MIT",
-            
+            "GNU GPLv3",
+            "Mozilla Public License 2.0",
+            "Apache License 2.0",
+            "The Unlicense"            
         ]
     },
 
     {
         type: "input",
-        message: "please enter git hub user names of the contributor if any (If there are mulitple contributor, seperate names with comma and no space! )",
+        message: "Please enter any contributers to the project (seperate Github names with a comma)",
         name: "contributorsGitUserName"
     },
 
