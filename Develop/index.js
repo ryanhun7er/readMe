@@ -11,7 +11,7 @@ const contents = userResonse.contents;
 const install = userResponse.install;
 const instruction = userResponse.instruction;
 const licenseName = userResponse.licenseName;
-const contributorUserNames = userResponse.contributorsGitUserName;
+const contributorUserNames = userResponse.contributors;
 const tests = userResponse.tests;
     
 //retrieve data from git
@@ -20,7 +20,7 @@ const gitResponse = await axios.get(`https://api.github.com/users/${gitUsername}
 const gitData = gitResponse.data;
 const gitName = gitData.login;
 const gitEmail = gitData.email;
-const gitlocation = gitData.location;
+const gitLocation = gitData.location;
 const gitUrl = gitData.html_url;
 const gitProfileImage = gitData.avatar_url;
 //const contributorUserNamesArray = contributorUserNames.split(",");
@@ -82,7 +82,7 @@ async function promptUser() {
     {
         type: "input",
         message: "Please enter any contributers to the project (seperate Github names with a comma)",
-        name: "contributorsGitUserName"
+        name: "contributors"
     },
 
     {
@@ -95,6 +95,7 @@ async function promptUser() {
     console.log(userResonse);
 }
 
+//script for writing inputs to readme
 var userInput = (`
 
 # ${projectT}
@@ -106,29 +107,35 @@ var userInput = (`
 ## Installation
 *${install}
 
+## Instructions for Use
+*${instruction}
+
+## License
+*${licenseName}
+
+## Contributors
+*${contributorUserNames}
+
+## Testing
+*${tests}
+
+## Contact
+\n![ProfileImage](${gitProfileImage})
+*${gitName}
+*${gitEmail}
+*${gitLocation}
+*${gitUrl}
 
 
+`)
 
-`
+//write and create readme
 
-    
-
-)
+var writeResult = fs.writeFileSync(README.md, userInput)
 
 
     promptUser();
 
 
 
-// const questions = [
 
-// ];
-
-// function writeToFile(fileName, data) {
-// }
-
-// function init() {
-
-// }
-
-// init();
