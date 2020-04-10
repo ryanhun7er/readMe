@@ -102,7 +102,7 @@ var userInput = (`
 
 ![Badge](https://img.shields.io/static/v1?label=License&message=${licenseName}&color=COLOR?style=plastic)
 
-![Badge](https://img.shields.io/static/v1?label=Test&message=npmtest&color=COLOR?style=plastic)
+
 
 # ${projectT}
 * ${projectD}
@@ -132,11 +132,12 @@ var userInput = (`
 \n* ${gitLocation}
 \n* ${gitUrl}
 
+
 `)
 
 
 //write and create readme
-fs.writeFileSync('README.md', userInput)
+fs.writeFileSync('../README.md', userInput)
 }
 
 //execute function
