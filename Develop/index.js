@@ -2,33 +2,12 @@ const inquirer = require("inquirer");
 const axios = require("axios");
 const fs = require('fs');
 
-//pull in user input
 
-const gitUsername = userResponse.username;
-const projectT = userResponse.projectT;
-const projectD = userResponse.projectD;
-const contents = userResonse.contents;
-const install = userResponse.install;
-const instruction = userResponse.instruction;
-const licenseName = userResponse.licenseName;
-const contributorUserNames = userResponse.contributors;
-const tests = userResponse.tests;
-    
-//retrieve data from git
-    
-const gitResponse = await axios.get(`https://api.github.com/users/${gitUsername}`);
-const gitData = gitResponse.data;
-const gitName = gitData.login;
-const gitEmail = gitData.email;
-const gitLocation = gitData.location;
-const gitUrl = gitData.html_url;
-const gitProfileImage = gitData.avatar_url;
-//const contributorUserNamesArray = contributorUserNames.split(",");
 
 //user questions
 
 async function promptUser() {
-    const userResonse = 
+    const userResponse = 
     await inquirer.prompt([
       {
         type: "input",
@@ -92,49 +71,71 @@ async function promptUser() {
     }
     ]);
 
-    console.log(userResonse);
-}
+    console.log(userResponse);
+    //pull in user input
+
+    const gitUsername = userResponse.username;
+    const projectT = userResponse.projectT;
+    const projectD = userResponse.projectD;
+    const contents = userResponse.contents;
+    const install = userResponse.install;
+    const instruction = userResponse.instruction;
+    const licenseName = userResponse.licenseName;
+    const contributorUserNames = userResponse.contributors;
+    const tests = userResponse.tests;
+        
+    //retrieve data from git
+        
+    const gitResponse = await axios.get(`https://api.github.com/users/${gitUsername}`);
+    const gitData = gitResponse.data;
+    const gitName = gitData.login;
+    const gitEmail = gitData.email;
+    const gitLocation = gitData.location;
+    const gitUrl = gitData.html_url;
+    const gitProfileImage = gitData.avatar_url;
+    //const contributorUserNamesArray = contributorUserNames.split(",");
+
 
 //script for writing inputs to readme
 var userInput = (`
 
 # ${projectT}
-*${projectD}
+* ${projectD}
 
 ## Table of Contents
-*${contents}
+* ${contents}
 
 ## Installation
-*${install}
+* ${install}
 
 ## Instructions for Use
-*${instruction}
+* ${instruction}
 
 ## License
-*${licenseName}
+* ${licenseName}
 
 ## Contributors
-*${contributorUserNames}
+* ${contributorUserNames}
 
 ## Testing
-*${tests}
+* ${tests}
 
 ## Contact
 \n![ProfileImage](${gitProfileImage})
-*${gitName}
-*${gitEmail}
-*${gitLocation}
-*${gitUrl}
-
+\n* @${gitName}
+\n* ${gitEmail}
+\n* ${gitLocation}
+\n* ${gitUrl}
 
 `)
 
+
 //write and create readme
+fs.writeFileSync('README.md', userInput)
+}
 
-var writeResult = fs.writeFileSync(README.md, userInput)
-
-
-    promptUser();
+//execute function
+promptUser();
 
 
 
