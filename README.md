@@ -15,7 +15,7 @@
 * install
 
 ## Instructions for Use
-* answer the questions
+* ![gif](Develop/assets/readMe.gif)
 
 ## License
 * MozillaPublicLicense2.0
