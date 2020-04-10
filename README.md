@@ -1,27 +1,28 @@
 
 
 
-![Badge](https://img.shields.io/static/v1?label=License&message=MozillaPublicLicense2.0&color=COLOR?style=plastic)
+![Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=COLOR?style=plastic)
 
 
 
-# readMe
-* Create a readMe quick and easy
+# readMe auto-generator
+* This appliction will create a readMe file automatically from a few user inputs.
 
 ## Table of Contents
-* 1. Test 2. Restest
+* 1. Installation 2. Instructions for use 3. License 4. Contributors 5. Testing 6. Contact
 
 ## Installation
-* install
+* Clone or download the repo. Clone to your VS Code. Navigate to the Develop folder and run program in your Terminal by typing 'node index'
 
 ## Instructions for Use
-* ![gif](Develop/assets/readMe.gif)
+* Type 'node index' in your terminal and follow the prompts
+![gif](Develop/assets/readMe.gif)
 
 ## License
-* MozillaPublicLicense2.0
+* MIT
 
 ## Contributors
-* me, myself, and I
+* @ryanhun7er
 
 ## Testing
 * jest
