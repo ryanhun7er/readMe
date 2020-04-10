@@ -1,30 +1,30 @@
 
 
 
-![Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=COLOR?style=plastic)
+![Badge](https://img.shields.io/static/v1?label=License&message=MozillaPublicLicense2.0&color=COLOR?style=plastic)
 
 
 
-# 
-* 
+# readMe
+* Create a readMe quick and easy
 
 ## Table of Contents
-* 
+* 1. Test 2. Restest
 
 ## Installation
-* 
+* install
 
 ## Instructions for Use
-* 
+* answer the questions
 
 ## License
-* MIT
+* MozillaPublicLicense2.0
 
 ## Contributors
-* 
+* me, myself, and I
 
 ## Testing
-* 
+* jest
 
 ## Contact
 
