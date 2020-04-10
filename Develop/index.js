@@ -51,10 +51,10 @@ async function promptUser() {
         message: "Select license used:",
         choices: [
             "MIT",
-            "GNU GPLv3",
-            "Mozilla Public License 2.0",
-            "Apache License 2.0",
-            "The Unlicense"            
+            "GNUGPLv3",
+            "MozillaPublicLicense2.0",
+            "ApacheLicense2.0",
+            "TheUnlicense"            
         ]
     },
 
@@ -98,6 +98,11 @@ async function promptUser() {
 
 //script for writing inputs to readme
 var userInput = (`
+
+
+![Badge](https://img.shields.io/static/v1?label=License&message=${licenseName}&color=COLOR?style=plastic)
+
+![Badge](https://img.shields.io/static/v1?label=Test&message=npmtest&color=COLOR?style=plastic)
 
 # ${projectT}
 * ${projectD}

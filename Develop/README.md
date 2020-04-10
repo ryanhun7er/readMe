@@ -1,25 +1,28 @@
 
 
-# readMe auto
-* How to create a quick readMe file
+
+![Badge](https://img.shields.io/static/v1?label=License&message=GNUGPLv3&color=COLOR?style=plastic)
+
+# 
+* 
 
 ## Table of Contents
-* TOC, Install, Instructions
+* 
 
 ## Installation
-* install
+* 
 
 ## Instructions for Use
-* follow prompts
+* 
 
 ## License
-* MIT
+* GNUGPLv3
 
 ## Contributors
-* me, myself, and I
+* 
 
 ## Testing
-* jest
+* 
 
 ## Contact
 
