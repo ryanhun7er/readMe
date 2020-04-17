@@ -5,27 +5,26 @@
 
 
 
-# readMe auto-generator
-* This appliction will create a readMe file automatically from a few user inputs.
+# readMe
+* readMe Auto Generator
 
 ## Table of Contents
-* 1. Installation 2. Instructions for use 3. License 4. Contributors 5. Testing 6. Contact
+*  1. Intallation 2. Instructions 3. License 4. Contributors 5. Testing 
 
 ## Installation
-* Clone or download the repo. Clone to your VS Code. Navigate to the Develop folder and run program in your Terminal by typing 'node index'
+* Clone the repo to VS
 
 ## Instructions for Use
-* Type 'node index' in your terminal and follow the prompts
 ![gif](Develop/assets/readMe.gif)
 
 ## License
 * MIT
 
 ## Contributors
-* @ryanhun7er
+* ryanhun7er
 
 ## Testing
-* jest
+* npm test
 
 ## Contact
 
