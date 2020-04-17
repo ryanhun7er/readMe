@@ -9,7 +9,11 @@
 * readMe Auto Generator
 
 ## Table of Contents
-*  1. Intallation 2. Instructions 3. License 4. Contributors 5. Testing 
+1. Intallation 
+2. Instructions 
+3. License 
+4. Contributors 
+5. Testing 
 
 ## Installation
 * Clone the repo to VS
