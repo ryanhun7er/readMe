@@ -5,17 +5,19 @@
 
 
 
-# Employee Management System
-* This application will allow you to add, update, and view Employees
+# VegaBurger
+* Create a burger list and dvour them on command! Then delete them from your list at your leisure!
 
 ## Table of Contents
-*  1. Intallation 2. Instructions 3. License 4. Contributors 
+* 1. Intallation 
 
 ## Installation
-* Clone the repo. Copy files schema and seed files into your MySQL.
+* Navigate to https://vegaburger.herokuapp.com/
 
 ## Instructions for Use
-* See steps to run application below
+* Insert burger name into input box. Select "Add Burger" or hit enter. Burger will be displayed on left side. Select "Devour" to move to 'Burgers Devoured' list. To remove burgers from 'Devoured' list select remove button.
+
+![gif](/assets//images/burger.gif)
 
 ## License
 * MIT
@@ -24,7 +26,7 @@
 * ryanhun7er
 
 ## Testing
-* N/A
+* n/a
 
 ## Contact
 
