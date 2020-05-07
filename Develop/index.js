@@ -137,7 +137,7 @@ var userInput = (`
 
 
 //write and create readme
-fs.writeFileSync('../README.md', userInput)
+fs.writeFileSync('../READMEv.md', userInput)
 }
 
 //execute function
