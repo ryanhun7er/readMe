@@ -5,28 +5,28 @@
 
 
 
-# VegaBurger
-* Create a burger list and dvour them on command! Then delete them from your list at your leisure!
+# Workout Tracker
+* The application allows you to track your workouts and see progress over the last seven days
 
 ## Table of Contents
-* 1. Intallation 
+* Installation
+* App Preview
+* License
+* License
+* Contributors
+
 
 ## Installation
-* Navigate to https://vegaburger.herokuapp.com/
+* No need to install, just click the live link and start tracking your workouts!
 
-## Instructions for Use
-* Insert burger name into input box. Select "Add Burger" or hit enter. Burger will be displayed on left side. Select "Devour" to move to 'Burgers Devoured' list. To remove burgers from 'Devoured' list select remove button.
-
-![gif](/assets//images/burger.gif)
+## App Preview
+* 
 
 ## License
 * MIT
 
 ## Contributors
 * ryanhun7er
-
-## Testing
-* n/a
 
 ## Contact
 
